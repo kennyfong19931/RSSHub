@@ -120,6 +120,9 @@ export type Config = {
     email: {
         config: Record<string, string | undefined>;
     };
+    facebook: {
+        cookie?: string;
+    };
     fanbox: {
         session?: string;
     };
@@ -470,6 +473,9 @@ const calculateValue = () => {
         },
         email: {
             config: email_config,
+        },
+        facebook: {
+            cookie: envs.FACEBOOK_COOKIE,
         },
         fanbox: {
             session: envs.FANBOX_SESSION_ID,
